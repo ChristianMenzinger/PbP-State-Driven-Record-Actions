@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PbP-StateDrivenRecordActions</fullName>
+    <description>Code examples from the Pluralsight course &quot;Play by Play: State Driven Record Actions with Salesforce Lightning Components&quot;.
+The code is used to demonstrate the basic flow and techniques and therefore the implementation is simplified and some coding best practices like proper error handling are not enforced.</description>
+    <types>
+        <members>ActionButtonController</members>
+        <members>ActionButtonControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>BaseButton</members>
+        <members>BaseOrderActionButton</members>
+        <members>CancelOrderAction</members>
+        <members>CancelOrderActionButton</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Order_Management</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Order_Action_Setting__mdt.Cancel_Order_Action_Allowed__c</members>
+        <members>Order_Action_Setting__mdt.Order_Status__c</members>
+        <members>Order_Action_Setting__mdt.Send_Order_Return_Action__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Order_Action_Setting.Delivered_Action</members>
+        <members>Order_Action_Setting.Order_Entry_Actions</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Order_Action_Setting__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Order_Management_UtilityBar</members>
+        <members>Order_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Order-Order Layout</members>
+        <members>Order_Action_Setting__mdt-Order Action Setting Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Order.Cancel_Order</members>
+        <members>Order.Update_Order_Record</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <name>Profile</name>
+    </types>
+    <version>41.0</version>
+</Package>

@@ -1,0 +1,7 @@
+<aura:component extends="c:BaseButton" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	
+    <aura:if isTrue="{! and(v.order.Status != 'In Delivery', v.order.Status != 'Delivered') }">
+    	<lightning:button label="Cancel Order" onclick="{!c.onCancelOrderClick}" />
+        <p>Visibility of this Button is hardcoded but uses a base class and LDS</p>
+    </aura:if> 
+</aura:component>

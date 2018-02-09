@@ -1,0 +1,6 @@
+<aura:component extends="c:BaseOrderActionButton" implements="flexipage:availableForAllPageTypes">
+    <aura:set attribute="actionAPIName" value="Cancel_Order_Action_Allowed__c"/>
+    <aura:set attribute="label" value="Cancel Order CustomMetaData" />
+    <aura:set attribute="buttonClickAction" value="{!c.onCancelOrderButtonClick}" />
+    <p>Visibility of this button is managed by CustomMetadata through base class</p>
+</aura:component>

@@ -1,0 +1,49 @@
+<aura:component abstract="true" extensible="true" access="global" implements="force:hasRecordId"
+                controller="ActionButtonController">    
+    
+    <!-- attributes public accessible -->
+    <aura:attribute name="recordId" type="String" access="global" />
+    
+    <!-- attributes - privates (because of inheritance must be access="public") for concrete implementations -->
+    <aura:attribute name="actionAPIName" type="String" access="public" default="n/a"
+                    description="API name of field which reflects button functionality of custom metadata. Must be set in concrete button implementation."/>
+    
+    <aura:attribute name="buttonClickAction" type="Aura.Action" access="public"
+                    description="Concrete controller method to be called when button is clicked." />
+    
+    <aura:attribute name="isButtonActionAvailable" type="Boolean" access="public" default="false" 
+                    description="Whether button action is available or not." />
+    
+    <aura:attribute name="label" type="String" access="public" 
+                    description="The label used for the button and alternative text." />
+    
+    
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="order" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.order}"
+                      targetError="{!v.recordError}"
+                      recordUpdated="{!c.onRecordUpdated}"
+                      />
+    
+    <!-- event handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    
+    <aura:if isTrue="{!v.isButtonActionAvailable}">
+        <lightning:button class="slds-button-halfwidth slds-truncate slds-text-align_left" 
+                          variant="neutral" 
+                          label="{!v.label}"
+                          title="{!v.label}"
+                          onclick="{!v.buttonClickAction}"
+                          />
+        
+        <!-- apply body as concrete buttons could implement additional components like modal -->
+        {!v.body}
+    </aura:if>
+    
+</aura:component>

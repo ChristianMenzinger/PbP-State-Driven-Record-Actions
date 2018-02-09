@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Cancel_Order_Action_Allowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Cancel Order Action Allowed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Status__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Order Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Order Entry</fullName>
+                    <default>true</default>
+                    <label>Order Entry</label>
+                </value>
+                <value>
+                    <fullName>Payment Success</fullName>
+                    <default>false</default>
+                    <label>Payment Success</label>
+                </value>
+                <value>
+                    <fullName>Payment Failed</fullName>
+                    <default>false</default>
+                    <label>Payment Failed</label>
+                </value>
+                <value>
+                    <fullName>Packaging</fullName>
+                    <default>false</default>
+                    <label>Packaging</label>
+                </value>
+                <value>
+                    <fullName>Waiting for Delivery</fullName>
+                    <default>false</default>
+                    <label>Waiting for Delivery</label>
+                </value>
+                <value>
+                    <fullName>In Delivery</fullName>
+                    <default>false</default>
+                    <label>In Delivery</label>
+                </value>
+                <value>
+                    <fullName>Delivered</fullName>
+                    <default>false</default>
+                    <label>Delivered</label>
+                </value>
+                <value>
+                    <fullName>Return to Sender</fullName>
+                    <default>false</default>
+                    <label>Return to Sender</label>
+                </value>
+                <value>
+                    <fullName>Order Cancelled</fullName>
+                    <default>false</default>
+                    <label>Order Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Send_Order_Return_Action__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Send Order Return Action</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Order Action Setting</label>
+    <pluralLabel>Order Action Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
